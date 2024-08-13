@@ -25,6 +25,12 @@ spec:
     value: quay.io/redhat-user-workloads-stage/arewm-tenant/multi-platform-test-stage/multi-platform-test-stage:{{revision}}
   - name: dockerfile
     value: docker/Dockerfile
+  - name: build-platforms
+    value:
+      - linux/amd64
+      - linux/arm64
+      - linux/ppc64le
+      - linux/s390x
   pipelineRef:
     name: multi-arch-build-pipeline
   workspaces:

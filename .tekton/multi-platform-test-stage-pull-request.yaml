@@ -28,6 +28,10 @@ spec:
     value: 5d
   - name: dockerfile
     value: docker/Dockerfile
+  - name: build-platforms
+    value:
+      - localhost
+      - linux/arm64
   pipelineRef:
     name: multi-arch-build-pipeline
   workspaces:
