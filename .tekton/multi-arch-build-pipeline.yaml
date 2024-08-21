@@ -84,7 +84,7 @@ spec:
         - name: name
           value: buildah-remote-oci-ta
         - name: bundle
-          value: quay.io/arewm/buildah-remote-oci-ta-bundle@sha256:180a4666fb3b21860c527d45f38ef7355be6ea7684180fbb0ba66d171f959f97
+          value: quay.io/konflux-ci/tekton-catalog/task-buildah-remote-oci-ta@sha256:097557c6cae66b20cdc4bd83d5461f4048967bd9536698ecd70114a8af3e2c31
         - name: kind
           value: task
       runAfter:
@@ -123,8 +123,6 @@ spec:
           value: $(params.output-image)
         - name: COMMIT_SHA
           value: $(tasks.clone-repository.results.commit)
-        - name: ALWAYS_BUILD_INDEX
-          value: "false"
         - name: IMAGES
           value:
             - $(tasks.build-containers.results.IMAGE_REF[*])
@@ -133,7 +131,7 @@ spec:
           - name: name
             value: build-image-index
           - name: bundle
-            value: quay.io/arewm/build-image-index@sha256:a8278bdd98d4e3b4ec4681d4fb544c2cae75c9a1c12bce4e17597fbbfbb8aa6f
+            value: quay.io/konflux-ci/tekton-catalog/task-build-image-index@sha256:a0ac2ef2107c8d117febbe076c884ef12e0276b0942a47c3906f5f25d128073e
           - name: kind
             value: task
         resolver: bundles
