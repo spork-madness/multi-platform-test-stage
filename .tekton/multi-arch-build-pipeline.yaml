@@ -133,7 +133,7 @@ spec:
           - name: name
             value: build-image-index
           - name: bundle
-            value: quay.io/arewm/build-image-index@sha256:10be64a9b635850ee7407ae1b818538ae548ec55005d03509f98abdb3b28c177
+            value: quay.io/arewm/build-image-index@sha256:a8278bdd98d4e3b4ec4681d4fb544c2cae75c9a1c12bce4e17597fbbfbb8aa6f
           - name: kind
             value: task
         resolver: bundles
