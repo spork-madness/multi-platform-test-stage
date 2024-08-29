@@ -31,7 +31,6 @@ spec:
   - name: build-platforms
     value:
       - localhost
-      - linux/arm64
   pipelineRef:
     name: multi-arch-build-pipeline
   workspaces:
